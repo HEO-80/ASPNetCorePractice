@@ -4,7 +4,7 @@ namespace MasterNet.Models
 {
     public class Post
     {
-
+        //introduction over project
         public int Id { get; set; }
 
         [Required]
