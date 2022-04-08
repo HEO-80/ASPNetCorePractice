@@ -19,6 +19,7 @@ namespace MasterNet.Data
 
 
         public DbSet<Post> Posts {get; set;}
+        public DbSet<Tag> Tags { get; set; }
 
         public DbSet<ApplicationUser>  ApplicationUsers{ get; set; }
 
