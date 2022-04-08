@@ -329,3 +329,4 @@ C:\ProyectosNET\Heo\Practica2\MasterNet2\MasterNet\obj\Debug\net5.0\Razor\Views\
 C:\ProyectosNET\Heo\Practica2\MasterNet2\MasterNet\obj\Debug\net5.0\Razor\Views\Posts\Details.cshtml.g.cs
 C:\ProyectosNET\Heo\Practica2\MasterNet2\MasterNet\obj\Debug\net5.0\Razor\Views\Posts\Edit.cshtml.g.cs
 C:\ProyectosNET\Heo\Practica2\MasterNet2\MasterNet\obj\Debug\net5.0\Razor\Views\Posts\Index.cshtml.g.cs
+C:\ProyectosNET\Heo\Practica2\MasterNet2\MasterNet\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
