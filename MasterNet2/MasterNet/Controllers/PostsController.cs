@@ -27,15 +27,46 @@ namespace MasterNet.Controllers
 
             if (title == null)
             {
-                posts = await _context.Posts.ToListAsync();
+                posts = await _context.Posts.Include(navigationPropertyPath: x => x.Tag).ToListAsync();
             }
             else
             {
-                posts = await _context.Posts.Where(x => x.Title.Contains(title)).ToListAsync();
+                posts = await _context.Posts.Include(navigationPropertyPath: x => x.Tag).Where(x => x.Title.Contains(title)).ToListAsync();
             }
 
             return View(posts);
         }
+
+
+        // GET: Posts/Tag
+        public async Task<IActionResult> Tag(string tag)
+        {
+
+            List<Post> posts;
+
+            if (tag == null)
+            {
+                posts = await _context.Posts.Include(navigationPropertyPath: x => x.Tag).ToListAsync();
+            }
+            else
+            {
+                posts = await _context.Posts.Include(navigationPropertyPath: x => x.Tag).Where(x => x.Tag.Name == tag).ToListAsync();
+            }
+
+            return View("Index", posts);
+        }
+
+        // GET: Posts/ByTag
+        public async Task<IActionResult> ByTag(string tag)
+        {
+
+           
+              var  posts = await _context.Posts.Include(navigationPropertyPath: x => x.Tag).GroupBy(x => x.TagId).ToListAsync();
+            
+
+            return View("Index", posts);
+        }
+
 
         // GET: Posts/Details/5
         public async Task<IActionResult> Details(int? id)
